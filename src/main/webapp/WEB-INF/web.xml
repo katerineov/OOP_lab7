@@ -1,0 +1,72 @@
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <welcome-file-list>
+        <welcome-file>partials/index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Сервлет для главной страницы -->
+    <servlet>
+        <servlet-name>MainController</servlet-name>
+        <servlet-class>com.laba7.controller.MainController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainController</servlet-name>
+        <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+
+    <!-- Сервлет для страницы "О компании" -->
+    <servlet>
+        <servlet-name>AboutController</servlet-name>
+        <servlet-class>com.laba7.controller.AboutController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AboutController</servlet-name>
+        <url-pattern>/about</url-pattern>
+    </servlet-mapping>
+
+    <!-- Сервлет для страницы "Услуги" -->
+    <servlet>
+        <servlet-name>ServicesController</servlet-name>
+        <servlet-class>com.laba7.controller.ServicesController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServicesController</servlet-name>
+        <url-pattern>/services</url-pattern>
+    </servlet-mapping>
+
+    <!-- Сервлет для страницы "Контакты" -->
+    <servlet>
+        <servlet-name>ContactsController</servlet-name>
+        <servlet-class>com.laba7.controller.ContactsController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContactsController</servlet-name>
+        <url-pattern>/contacts</url-pattern>
+    </servlet-mapping>
+
+    <!-- Сервлет для обработки формы "Обратная связь" -->
+    <servlet>
+        <servlet-name>FeedbackController</servlet-name>
+        <servlet-class>com.laba7.controller.FeedbackController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FeedbackController</servlet-name>
+        <url-pattern>/feedback</url-pattern>
+    </servlet-mapping>
+
+    <!-- Сервлет для страницы "FAQ" -->
+    <servlet>
+        <servlet-name>FaqController</servlet-name>
+        <servlet-class>com.laba7.controller.FaqController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FaqController</servlet-name>
+        <url-pattern>/faq</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
